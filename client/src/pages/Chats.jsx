@@ -8,7 +8,9 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Chats() {
   const location = useLocation();
-  const [selectedContact, setSelectedContact] = useState(null);
+  const [selectedContact, setSelectedContact] = useState(
+    location.state?.selectedContact || null
+  );
   const [chats, setChats] = useState([]);
   const userId = localStorage.getItem("userId");
   const token = localStorage.getItem("token");
@@ -27,12 +29,6 @@ export default function Chats() {
   useEffect(() => {
     loadChats();
   }, [loadChats]);
-
-  useEffect(() => {
-    if (location.state?.selectedContact) {
-      setSelectedContact(location.state.selectedContact);
-    }
-  }, [location.state]);
 
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-6">
