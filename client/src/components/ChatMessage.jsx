@@ -3,7 +3,7 @@ export default function ChatMessage({ text, sender, avatar, isOwn }) {
     <div className={`flex ${isOwn ? "justify-end" : "justify-start"} mb-3`}>
       {!isOwn && (
         <img
-          src={avatar || "https://via.placeholder.com/40"}
+          src={avatar || "https://ui-avatars.com/api/?size=40&name=User"}
           alt={sender?.name || "User"}
           className="w-10 h-10 rounded-full mr-2 object-cover"
         />
@@ -21,7 +21,7 @@ export default function ChatMessage({ text, sender, avatar, isOwn }) {
 
       {isOwn && (
         <img
-          src="https://via.placeholder.com/40/457B9D"
+          src="https://ui-avatars.com/api/?size=40&name=You"
           alt="You"
           className="w-10 h-10 rounded-full ml-2 object-cover"
         />

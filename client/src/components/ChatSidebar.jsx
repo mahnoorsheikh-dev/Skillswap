@@ -28,7 +28,7 @@ export default function ChatSidebar({ chats, selectContact, userId }) {
               className="flex items-center gap-3 p-4 hover:bg-gray-100 cursor-pointer border-b"
             >
               <img
-                src={otherUser.avatar || "https://via.placeholder.com/40"}
+                src={otherUser.avatar || "https://ui-avatars.com/api/?size=150&name=User"}
                 alt={otherUser.name}
                 className="w-10 h-10 rounded-full object-cover"
               />

@@ -79,7 +79,7 @@ export default function ChatWindow({ selectedContact }) {
     <div className="w-2/3 flex flex-col">
       <div className="flex items-center gap-3 border-b p-4 bg-[#fdfdfd]">
         <img
-          src={selectedContact.avatar || "https://via.placeholder.com/150"}
+          src={selectedContact.avatar || "https://ui-avatars.com/api/?size=150&name=User"}
           className="w-12 h-12 rounded-full object-cover"
           alt={selectedContact.name}
         />
@@ -95,7 +95,7 @@ export default function ChatWindow({ selectedContact }) {
             key={index}
             text={msg.text}
             sender={msg.sender}
-            avatar={selectedContact.avatar || "https://via.placeholder.com/40"}
+            avatar={selectedContact.avatar || "https://ui-avatars.com/api/?size=40&name=User"}
             isOwn={msg.sender?._id === userId}
           />
         ))}

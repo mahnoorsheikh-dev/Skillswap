@@ -50,7 +50,7 @@ export default function ProfileHeader({ userId }) {
   return (
     <div className="flex justify-center items-center bg-[rgb(222,233,240)] relative py-6">
       <img
-        src={avatar || "https://via.placeholder.com/150"}
+        src={avatar || "https://ui-avatars.com/api/?size=150&name=User"}
         alt="User Avatar"
         className={`w-40 h-40 rounded-full border-4 border-white shadow-md object-cover ${isOwner ? "cursor-pointer hover:opacity-80 transition" : ""}`}
         onClick={() => isOwner && fileInputRef.current.click()}

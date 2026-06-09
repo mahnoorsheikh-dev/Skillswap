@@ -66,7 +66,7 @@ export default function FindConnection() {
                 className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition"
               >
                 <img
-                  src={user.avatar || "https://via.placeholder.com/150"}
+                  src={user.avatar || "https://ui-avatars.com/api/?size=150&name=User"}
                   alt={user.name}
                   className="w-20 h-20 rounded-full mb-4 object-cover"
                 />

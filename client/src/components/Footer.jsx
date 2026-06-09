@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
   const userId = localStorage.getItem("userId");
@@ -28,18 +27,17 @@ export default function Footer() {
             <li><Link to="/chats" className="hover:text-[#a8dadc]">Chats</Link></li>
             {!userId && (
               <li><Link to="/auth" className="hover:text-[#a8dadc]">Login / Signup</Link></li>
-            )}
+              )}
           </ul>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-[#a8dadc]"><Facebook /></a>
-            <a href="#" className="hover:text-[#a8dadc]"><Twitter /></a>
-            <a href="#" className="hover:text-[#a8dadc]"><Linkedin /></a>
-            <a href="#" className="hover:text-[#a8dadc]"><Github /></a>
-          </div>
+          <h3 className="text-lg font-semibold mb-3">Connect</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li><a href="#" className="hover:text-[#a8dadc]">Twitter</a></li>
+            <li><a href="#" className="hover:text-[#a8dadc]">LinkedIn</a></li>
+            <li><a href="#" className="hover:text-[#a8dadc]">GitHub</a></li>
+          </ul>
         </div>
       </div>
 
