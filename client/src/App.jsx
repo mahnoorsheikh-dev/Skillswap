@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Auth from "./pages/Auth.jsx";
@@ -12,13 +12,9 @@ import Footer from "./components/Footer.jsx";
 import DashboardHome from "./pages/DashboardHome.jsx";
 
 function AppContent() {
-  const [userId, setUserId] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [userId, setUserId] = useState(() => localStorage.getItem("userId"));
 
   useEffect(() => {
-    setUserId(localStorage.getItem("userId"));
-    setLoading(false);
-
     const handleStorageChange = () => {
       setUserId(localStorage.getItem("userId"));
     };
@@ -26,8 +22,6 @@ function AppContent() {
     window.addEventListener("storage", handleStorageChange);
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
-
-  if (loading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
 
   return (
     <>
