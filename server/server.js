@@ -35,6 +35,10 @@ app.get("/", (req, res) => {
   res.send("Backend OK");
 });
 
+app.get("/api/test", (req, res) => {
+  res.json({ message: "API is working" });
+});
+
 const server = createServer(app);
 
 const io = new Server(server, {
